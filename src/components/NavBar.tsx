@@ -8,7 +8,7 @@ import logo from '../../public/logo.png'
 export default function NavBar (){
     const path = usePathname()
     return(
-        <div className="flex items-center bg-primary justify-between p-4 shadow-md">
+        <header className="flex items-center bg-primary justify-between p-4 shadow-md">
             <Link className='flex items-center' href='/'>
                 <Image src={logo} alt="logo" height={60} width={60} className="mr-auto"/>
                 <h1 className="font-bold text-2xl text-white">DuoLibras</h1>
@@ -20,6 +20,6 @@ export default function NavBar (){
                     <li><Link className={path.startsWith('/historia') ? 'active' : undefined} href='/historia'>História</Link></li>
                 </ul>   
             </nav>
-        </div>
+        </header>
     )
 }
