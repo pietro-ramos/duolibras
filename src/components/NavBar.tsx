@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
+import Image from "next/image"
 import logo from '../../public/logo.png'
 
 
@@ -13,7 +13,7 @@ export default function NavBar (){
                 <Image src={logo} alt="logo" height={60} width={60} className="mr-auto"/>
                 <h1 className="font-bold text-2xl text-white">DuoLibras</h1>
             </Link>
-            <nav className="grow">
+            <nav className="grow mr-40">
                 <ul>
                     <li><Link className={path.startsWith('/jogos') ? 'active' : undefined} href='/jogos'>Jogos</Link></li>
                     <li><Link className={path.startsWith('/aprendizado') ? 'active' : undefined} href='/aprendizado'>Aprendizado</Link></li>
