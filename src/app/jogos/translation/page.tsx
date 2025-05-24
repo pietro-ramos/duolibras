@@ -19,7 +19,6 @@ export default function TranslationGame() {
   const [showAnswer, setShowAnswer] = useState(false);
   const [finished, setFinished] = useState(false);
 
-  // Se não houver direção, mostra a escolha
   if (!direction) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen gap-4">
