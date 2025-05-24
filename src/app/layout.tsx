@@ -1,20 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from '@/components/NavBar'
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "duoLibras",
-  description: "Projeto com foco no aprendizado da Libras",
+  title: "DuoLibras - Aprenda Libras",
+  description: "Plataforma interativa para aprendizado da Língua Brasileira de Sinais",
 };
 
 export default function RootLayout({
@@ -24,9 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${inter.className}`}>
         <NavBar/>
         {children}
       </body>
