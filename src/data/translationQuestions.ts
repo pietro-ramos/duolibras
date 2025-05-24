@@ -12,8 +12,8 @@ export const translationQuestionsLibrasPt: TranslationQuestion[] = [
     id: 1,
     prompt: "O que este gesto significa?",
     options: ["Bom dia", "Boa noite", "Obrigado", "Por favor"],
-    correctAnswer: "Obrigado",
-    mediaUrl: "/assets/gifs/obrigado.gif",
+    correctAnswer: "Boa noite",
+    mediaUrl: "https://ifpr.edu.br/umuarama/wp-content/uploads/sites/26/2021/03/boa-noite-gif.gif",
   },
   {
     id: 2,
