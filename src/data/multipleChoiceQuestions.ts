@@ -15,8 +15,8 @@ export const multipleChoiceQuestions: MultipleChoiceQuestion[] = [
     type: "multipleChoice",
     prompt: "Qual é a tradução correta deste gesto em Libras?",
     options: ["Bom dia", "Boa noite", "Obrigado", "Por favor"],
-    correctAnswer: "Bom dia",
-    mediaUrl: "/assets/gifs/bomdia.gif",
+    correctAnswer: "Boa noite",
+    mediaUrl: "https://ifpr.edu.br/umuarama/wp-content/uploads/sites/26/2021/03/boa-noite-gif.gif",
   },
   {
     id: 2,
