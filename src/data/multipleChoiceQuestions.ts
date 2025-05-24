@@ -24,7 +24,7 @@ export const multipleChoiceQuestions: MultipleChoiceQuestion[] = [
     prompt: "Qual doce está dizendo em LIBRAS",
     options: ["Pudin", "Churros", "Chocollate", "Doce de leite"],
     correctAnswer: "Chocollate",
-    mediaUrl: "https://ifpr.edu.br/umuarama/wp-content/uploads/sites/26/2021/04/chocolate-1.gif",
+    mediaUrl: "https://ifpr.edu.br/umuarama/wp-content/uploads/sites/26/2021/04/chocolate.gif",
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ export const multipleChoiceQuestions: MultipleChoiceQuestion[] = [
     prompt: "Os filhos de minha são meus?",
     options: ["Irmão", "Primos", "Irmãos", "Afilhado"],
     correctAnswer: "Irmãos",
-    mediaUrl: "https://ifpr.edu.br/umuarama/wp-content/uploads/sites/26/2021/04/irmaos-1.gif",
+    mediaUrl: "https://ifpr.edu.br/umuarama/wp-content/uploads/sites/26/2021/04/irmaos.gif",
   },
   {
     id: 5,
@@ -80,7 +80,7 @@ export const multipleChoiceQuestions: MultipleChoiceQuestion[] = [
     prompt: "Qual setimento esta sendo fala em LIBRAS?",
     options: ["Feliz", "Triste", "Bravo", "Cansado"],
     correctAnswer: "Feliz",
-    mediaUrl: "https://ifpr.edu.br/umuarama/wp-content/uploads/sites/26/2021/08/Feliz-1.gif",
+    mediaUrl: "https://ifpr.edu.br/umuarama/wp-content/uploads/sites/26/2021/08/Feliz.gif",
   },
   {
     id: 10,
@@ -88,6 +88,6 @@ export const multipleChoiceQuestions: MultipleChoiceQuestion[] = [
     prompt: "Objeto usado para sobrepor objstos em cima?",
     options: ["Estante", "Mesa", "Bancada", "Mesanino"],
     correctAnswer: "Mesa",
-    mediaUrl: "https://ifpr.edu.br/umuarama/wp-content/uploads/sites/26/2021/05/mesa-1.gif",
+    mediaUrl: "https://ifpr.edu.br/umuarama/wp-content/uploads/sites/26/2021/05/mesa.gif",
   }
 ];
