@@ -6,14 +6,14 @@ export interface MultipleChoiceQuestion {
   prompt: string;
   options: string[];
   correctAnswer: string;
-  mediaUrl: string; // GIF ou vídeo
+  mediaUrl: string;
 }
 
 export const multipleChoiceQuestions: MultipleChoiceQuestion[] = [
   {
     id: 1,
     type: "multipleChoice",
-    prompt: "Qual é a tradução correta deste gesto em LIBRAS?",
+    prompt: "Qual é a tradução correta deste sinal em LIBRAS?",
     options: ["Bom dia", "Boa noite", "Obrigado", "Por favor"],
     correctAnswer: "Boa noite",
     mediaUrl: "https://ifpr.edu.br/umuarama/wp-content/uploads/sites/26/2021/03/boa-noite-gif.gif",
@@ -21,15 +21,15 @@ export const multipleChoiceQuestions: MultipleChoiceQuestion[] = [
   {
     id: 2,
     type: "multipleChoice",
-    prompt: "Qual doce está dizendo em LIBRAS",
-    options: ["Pudin", "Churros", "Chocollate", "Doce de leite"],
-    correctAnswer: "Chocollate",
+    prompt: "Qual doce está sendo dito em LIBRAS?",
+    options: ["Pudim", "Churros", "Chocolate", "Doce de leite"],
+    correctAnswer: "Chocolate",
     mediaUrl: "https://ifpr.edu.br/umuarama/wp-content/uploads/sites/26/2021/04/chocolate.gif",
   },
   {
     id: 3,
     type: "multipleChoice",
-    prompt: "Qual mês o sinal esta fazendo refência em LIBRAS?",
+    prompt: "Qual mês está sendo dito?",
     options: ["Dezembro", "Junho", "Março", "Fevereiro"],
     correctAnswer: "Março",
     mediaUrl: "https://ifpr.edu.br/umuarama/wp-content/uploads/sites/26/2021/06/marco.gif",
@@ -37,8 +37,8 @@ export const multipleChoiceQuestions: MultipleChoiceQuestion[] = [
   {
     id: 4,
     type: "multipleChoice",
-    prompt: "Os filhos de minha são meus?",
-    options: ["Irmão", "Primos", "Irmãos", "Afilhado"],
+    prompt: "Qual parte da família está sendo falada?",
+    options: ["Pais", "Primos", "Irmãos", "Afilhado"],
     correctAnswer: "Irmãos",
     mediaUrl: "https://ifpr.edu.br/umuarama/wp-content/uploads/sites/26/2021/04/irmaos.gif",
   },
@@ -53,7 +53,7 @@ export const multipleChoiceQuestions: MultipleChoiceQuestion[] = [
   {
     id: 6,
     type: "multipleChoice",
-    prompt: " O que é que tem orelhas grandes e gosta de comer cenoura? ",
+    prompt: " Qual o animal? ",
     options: ["Cachorro", "Gato", "Pássaro", "Coelho"],
     correctAnswer: "Coelho",
     mediaUrl: "https://ifpr.edu.br/umuarama/wp-content/uploads/sites/26/2021/08/Coelh@.gif",
@@ -61,7 +61,7 @@ export const multipleChoiceQuestions: MultipleChoiceQuestion[] = [
   {
     id: 7,
     type: "multipleChoice",
-    prompt: "Qaul palavra de agradecimento foi dita em LIBRA?",
+    prompt: "Qual expressão cordial está sendo dita?",
     options: ["Obrigado", "Desculpa", "Por favor", "Com licença"],
     correctAnswer: "Obrigado",
     mediaUrl: "https://ifpr.edu.br/umuarama/wp-content/uploads/sites/26/2021/03/obrigado-gif.gif",
@@ -69,23 +69,23 @@ export const multipleChoiceQuestions: MultipleChoiceQuestion[] = [
   {
     id: 8,
     type: "multipleChoice",
-    prompt: "Fruta de cor amarela?",
-    options: ["Morando", "Maracuja", "Banana", "Araça"],
+    prompt: "Qual a fruta?",
+    options: ["Morango", "Maracujá", "Banana", "Maçã"],
     correctAnswer: "Banana",
     mediaUrl: "https://ifpr.edu.br/umuarama/wp-content/uploads/sites/26/2021/04/banana.gif",
   },
   {
     id: 9,
     type: "multipleChoice",
-    prompt: "Qual setimento esta sendo fala em LIBRAS?",
-    options: ["Feliz", "Triste", "Bravo", "Cansado"],
+    prompt: "Qual sentimento está sendo expressado?",
+    options: ["Feliz", "Triste", "Animado", "Cansado"],
     correctAnswer: "Feliz",
     mediaUrl: "https://ifpr.edu.br/umuarama/wp-content/uploads/sites/26/2021/08/Feliz.gif",
   },
   {
     id: 10,
     type: "multipleChoice",
-    prompt: "Objeto usado para sobrepor objstos em cima?",
+    prompt: "A que objeto está se referindo?",
     options: ["Estante", "Mesa", "Bancada", "Mesanino"],
     correctAnswer: "Mesa",
     mediaUrl: "https://ifpr.edu.br/umuarama/wp-content/uploads/sites/26/2021/05/mesa.gif",
