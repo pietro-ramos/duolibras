@@ -1,7 +1,7 @@
 'use client'
 import { useSearchParams, useRouter } from 'next/navigation';
 import { translationQuestionsLibrasPt, translationQuestionsPtLibras } from '@/data/translationQuestions';
-import TranslationBox from '@/components/TranslationBox';
+import TranslationBox from '@/components/translationBox';
 import { useState } from 'react';
 
 export default function TranslationGame() {
