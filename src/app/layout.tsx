@@ -29,9 +29,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-if (process.env.NODE_ENV !== 'production' && typeof window !== 'undefined') {
-  import('@axe-core/react').then(axe => {
-    axe.default(React, ReactDOM, 1000);
-  });
-}
