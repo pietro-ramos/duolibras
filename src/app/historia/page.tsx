@@ -3,12 +3,12 @@ import { Calendar, Users, Award, BookOpen, Book } from "lucide-react"
 export default function Historia(){
 
     return(
-        <main>
+        <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4 w-screen">
             <div className=" text-center mx-auto p-4 mt-10">
-                <h1 className="font-bold text-3xl text-gray-800 mb-4">História da Libras</h1>
+                <h1 className="font-bold text-3xl text-gray-800 mb-4">História da <span className="text-blue-600">Libras</span></h1>
                 <p className="text-gray-600 text-xl">Conheça a trajetória e evolução da Língua Brasileira de Sinais</p>
             </div>
-            <div className="flex flex-col gap-4 mx-auto max-w-screen-lg max-h-[500px] h-full">
+            <div className="flex flex-col gap-4 mx-auto max-w-screen-lg mb-8">
                 <div className="card-historia">
                     <div className="bg-blue-100 rounded-full p-2 h-fit ">
                         <Calendar className="w-6 h-6 text-blue-600"/>
@@ -45,6 +45,10 @@ export default function Historia(){
                         <p className="text-base text-gray-600 leading-relaxed">O decreto nº 5.626 regulamentou a Lei de Libras, estabelecendo diretrizes para o ensino da língua, formação de professores e intérpretes, e garantindo acessibilidade em instituições públicas.</p>
                     </div>
                 </div>
+            </div>
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-center rounded-2xl p-10 max-w-4xl mx-auto">
+                <h2 className="font-semibold text-2xl text-gray-200 mb-8">Por que a história da Libras é importante?</h2>
+                <p className="text-gray-200 text-lg font-medium leading-relaxed">Compreender a história da Libras nos ajuda a valorizar a luta da comunidade surda por reconhecimento e direitos. É uma língua rica em cultura e essencial para a inclusão social.</p>
             </div>
         </main>
     )
