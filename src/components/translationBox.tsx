@@ -1,26 +1,29 @@
-import { MultipleChoiceQuestion } from "@/data/multipleChoiceQuestions";
+import { TranslationQuestion } from "@/data/translationQuestions";
 
-export default function MultipleChoiceBox({
-  exercise,
+export default function TranslationBox({
+  question,
   onAnswer,
   selected,
   showAnswer,
 }: {
-  exercise: MultipleChoiceQuestion;
+  question: TranslationQuestion;
   onAnswer: (selected: string) => void;
   selected?: string | null;
   showAnswer?: boolean;
 }) {
+  // Se a opção for um GIF, mostra como imagem; senão, mostra como texto
+  const isOptionGif = (opt: string) => opt.endsWith('.gif') || opt.endsWith('.mp4');
+
   return (
     <div className="p-4 border rounded-xl shadow-md bg-white">
-      <p className="text-lg mb-2">{exercise.prompt}</p>
-      {exercise.mediaUrl && (
-        <img src={exercise.mediaUrl} alt="GIF de Libras" className="mb-4 mx-auto" width={180} height={180} />
+      <p className="text-lg mb-2">{question.prompt}</p>
+      {question.mediaUrl && (
+        <img src={question.mediaUrl} alt="GIF de Libras" className="mb-4 mx-auto" width={180} height={180} />
       )}
       <div className="flex flex-col gap-2">
-        {exercise.options.map((opt, id) => {
+        {question.options.map((opt, id) => {
           const isSelected = selected === opt;
-          const isCorrect = exercise.correctAnswer === opt;
+          const isCorrect = question.correctAnswer === opt;
           return (
             <button
               key={id}
@@ -31,7 +34,11 @@ export default function MultipleChoiceBox({
                 ${showAnswer && isCorrect ? "border-2 border-green-600" : ""}
               `}
             >
-              {opt}
+              {isOptionGif(opt) ? (
+                <img src={opt} alt="Opção Libras" width={120} height={120} />
+              ) : (
+                opt
+              )}
             </button>
           );
         })}

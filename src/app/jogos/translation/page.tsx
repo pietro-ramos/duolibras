@@ -1,19 +1,59 @@
 'use client'
-import { useState } from "react";
-import { multipleChoiceQuestions } from "@/data/multipleChoiceQuestions";
-import MultipleChoiceBox from "@/components/multipleChoiceBox";
+import { useSearchParams, useRouter } from 'next/navigation';
+import { translationQuestionsLibrasPt, translationQuestionsPtLibras } from '@/data/translationQuestions';
+import TranslationBox from '@/components/translationBox';
+import { useState } from 'react';
 
-export default function MultipleChoiceGame() {
-  const totalQuestions = multipleChoiceQuestions.length;
+export default function TranslationGame() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const direction = searchParams.get('direction');
+
+  const questions = direction === 'pt-libras'
+    ? translationQuestionsPtLibras
+    : translationQuestionsLibrasPt;
+
+  const totalQuestions = questions.length;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState<(string | null)[]>(Array(totalQuestions).fill(null));
   const [showAnswer, setShowAnswer] = useState(false);
   const [finished, setFinished] = useState(false);
 
-  const currentQuestion = multipleChoiceQuestions[currentIndex];
+  if (!direction) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen gap-4">
+        <h2 className="text-2xl font-bold mb-4">Escolha o tipo de tradução</h2>
+        <button
+          className="card-menu card-hover"
+          onClick={() => router.push('?direction=libras-pt')}
+        >
+          Libras para Português
+        </button>
+        <button
+          className="card-menu card-hover"
+          onClick={() => router.push('?direction=pt-libras')}
+        >
+          Português para Libras
+        </button>
+      </div>
+    );
+  }
+
+    if (!questions || questions.length === 0) {
+        return (
+        <div className="flex flex-col items-center justify-center min-h-screen">
+        <h2 className="text-xl font-bold mb-4">Nenhuma questão disponível para esta direção.</h2>
+        <button className="card-menu card-hover" onClick={() => router.push('/jogos/translation')}>
+            Voltar
+        </button>
+        </div>
+        );
+    }
+    
+  const currentQuestion = questions[currentIndex];
 
   const handleAnswer = (selected: string) => {
-    if (userAnswers[currentIndex] !== null) return; // impede resposta dupla
+    if (userAnswers[currentIndex] !== null) return;
     const updatedAnswers = [...userAnswers];
     updatedAnswers[currentIndex] = selected;
     setUserAnswers(updatedAnswers);
@@ -37,7 +77,7 @@ export default function MultipleChoiceGame() {
   };
 
   const isCorrect = userAnswers[currentIndex] === currentQuestion.correctAnswer;
-  const correctCount = userAnswers.filter((ans, idx) => ans === multipleChoiceQuestions[idx].correctAnswer).length;
+  const correctCount = userAnswers.filter((ans, idx) => ans === questions[idx].correctAnswer).length;
 
   if (finished) {
     return (
@@ -47,7 +87,7 @@ export default function MultipleChoiceGame() {
         <div className="w-full max-w-md mt-6">
           <h3 className="font-semibold mb-2">Revisão das respostas:</h3>
           <ul>
-            {multipleChoiceQuestions.map((q, idx) => (
+            {questions.map((q, idx) => (
               <li key={q.id} className="mb-2">
                 <span className="font-bold">Q{idx + 1}:</span> {q.prompt}<br/>
                 <span>Sua resposta: </span>
@@ -70,6 +110,12 @@ export default function MultipleChoiceGame() {
         >
           Refazer exercício
         </button>
+        <button
+          className="mt-2 p-2 bg-gray-300 rounded"
+          onClick={() => router.push('/jogos/translation')}
+        >
+          Voltar para seleção de direção
+        </button>
       </div>
     );
   }
@@ -80,8 +126,8 @@ export default function MultipleChoiceGame() {
         Questão {currentIndex + 1} / {totalQuestions}
       </div>
       <div className="w-full max-w-md">
-        <MultipleChoiceBox
-          exercise={currentQuestion}
+        <TranslationBox
+          question={currentQuestion}
           onAnswer={handleAnswer}
           selected={userAnswers[currentIndex]}
           showAnswer={showAnswer}
