@@ -21,6 +21,13 @@ body {
   w-4 max-w-[300px] min-h-full min-w-[300px]
 }
 
+.card-historia{
+  @apply p-8 bg-white rounded-3xl shadow
+  border border-gray-200
+  flex mx-auto text-justify
+  w-full max-w-4xl h-full
+}
+
 .card-hover{
   @apply hover:border-terciary hover:border-2 hover:border-solid hover:-translate-y-2
   transition-all duration-100 ease-in hover:scale-105 
