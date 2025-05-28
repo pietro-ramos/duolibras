@@ -46,17 +46,20 @@ export default function Home() {
 
         </div>
 
-        <div className="mt-40">
-          <h2 className="font-bold text-center text-3xl">Por que escolher o DuoLibras?</h2>
-          <div className="flex justify-between">
-            <div>
-              <p>Aprendizado interativo</p>
+        <div className="mt-20">
+          <h2 className="font-bold text-gray-800 text-center text-3xl mx-auto mb-8">Por que escolher o DuoLibras?</h2>
+          <div className="flex justify-between mx-auto">
+            <div className="card-mini">
+              <h3 className="font-semibold text-base text-gray-800 mb-2">Conteúdo oficial</h3>
+              <p className="text-gray-600 text-sm">Conteúdo retirado diretamente do site do IFRS</p>
             </div>
-            <div>
-              <p>Gamificação</p>
+            <div className="card-mini">
+              <h3 className="font-semibold text-base text-gray-800 mb-2">Aprendizado interativo</h3>
+              <p className="text-gray-600 text-sm">Material didático e intuitivo</p>
             </div>
-            <div>
-              <p>Conteúdo com base no Instituto Federal</p>
+            <div className="card-mini">
+              <h3 className="font-semibold text-base text-gray-800 mb-2">Gamificação</h3>
+              <p className="text-gray-600 text-sm">Pratique se divertindo com jogos</p>
             </div>
           </div>
         </div>
