@@ -8,13 +8,14 @@ body {
 }
 
 .card-menu{
-  @apply p-6 bg-secondary rounded shadow font-bold
-  flex items-center justify-center
-  w-full max-w-sm min-h-[100px] min-w-[350px]
+  @apply p-8 bg-white rounded-2xl shadow-lg
+  border border-gray-200
+  flex flex-col items-center text-center
+  w-4 max-w-[300px] min-h-[200px] min-w-[300px]
 }
 
 .card-hover{
-  @apply hover:border-terciary hover:border-4 hover:border-solid
+  @apply hover:border-terciary hover:border-2 hover:border-solid hover:-translate-y-2
   transition-all duration-100 ease-in hover:scale-105 
 }
 
