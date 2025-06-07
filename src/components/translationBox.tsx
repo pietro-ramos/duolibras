@@ -35,7 +35,7 @@ export default function TranslationBox({
               `}
             >
               {isOptionGif(opt) ? (
-                <img src={opt} alt="Opção Libras" width={120} height={120} />
+                <img className="" src={opt} alt="Opção Libras" width={120} height={120} />
               ) : (
                 opt
               )}

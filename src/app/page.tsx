@@ -14,7 +14,7 @@ export default function Home() {
 
         <div className="flex justify-evenly mx-auto">
 
-          <Link href='/aprendizado' className="group">
+          <a href='https://ifpr.edu.br/umuarama/libras-gifs/' className="group" target="_blank" rel="noopener noreferrer">
             <div className="card-menu card-hover">
               <div className="rounded-full bg-blue-100 p-4 mb-4 group-hover:bg-blue-200 transition-colors">
                 <BookOpen className="w-8 h-8 text-blue-600"/>
@@ -22,7 +22,7 @@ export default function Home() {
               <h3 className="font-bold text-2xl mb-3 text-gray-800">Aprendizado</h3>
               <p className="text-gray-600 leading-relaxed">Estude conteúdos como alfabeto, números, frases do cotidiano e mais</p>
             </div>
-          </Link>
+          </a>
 
           <Link href='/jogos' className="group">
             <div className="card-menu card-hover">
@@ -51,7 +51,7 @@ export default function Home() {
           <div className="flex justify-between mx-auto">
             <div className="card-mini">
               <h3 className="font-semibold text-base text-gray-800 mb-2">Conteúdo oficial</h3>
-              <p className="text-gray-600 text-sm">Conteúdo retirado diretamente do site do IFRS</p>
+              <p className="text-gray-600 text-sm">Conteúdo retirado diretamente dos sites do IFRS e IFPR</p>
             </div>
             <div className="card-mini">
               <h3 className="font-semibold text-base text-gray-800 mb-2">Aprendizado interativo</h3>

@@ -33,7 +33,7 @@ export default function TranslationGame() {
           className="card-menu card-hover"
           onClick={() => router.push('?direction=pt-libras')}
         >
-          Português para Libras
+          Português para Libras (Em desenvolvimento)
         </button>
       </div>
     );
