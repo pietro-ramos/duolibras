@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:seed": "curl -X POST http://localhost:3000/api/seed",
+    "db:status": "curl http://localhost:3000/api/status"
   },
   "dependencies": {
     "lucide-react": "^0.511.0",
